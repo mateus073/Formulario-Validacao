@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--fonte);
+}
+
+:root {
+    --preto: #0D1826;
+    --azul-fote: #384A59;
+    --azul-medio: #5E778C;
+    --azul-medio-claro: #7693A6;
+    --azul-claro: #C9E7F2;
+    --vermelha: #a21313;
+    --fonte: "Roboto", sans-serif;
+    --fonte-g: 1.2rem;
+    --fonte-p: 1rem;
+}
+
+/* div principal que contem o formulario e a img de  fundo */
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/fundog.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* corpo do formulario */
+#formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 40%;
+    min-width: 600px;
+    padding: 1rem;
+    border-radius: 30px;
+    z-index: 9999;
+    background-image: url('../img/fundom.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* titulo */
+.titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--fonte);
+    font-weight: 800;
+    color: var(--azul-medio-claro);
+    border-bottom: solid 2px var(--azul-medio-claro);
+}
+
+
+fieldset {
+    border: none;
+}
+
+label {
+    align-items: center;
+    margin-left: 13px;
+    cursor: pointer;
+    font-size: var(--fonte-g);
+    font-weight: 800;
+    color: var(--azul-claro);
+    font-weight: 600;
+}
+
+
+
+input {
+    outline: none; /* remove a bordar que aparece quando e selecionado */
+    width: 100%;
+    height: 40px;
+    font-size: var(--fonte-p);
+    padding: 0.4rem;
+    margin-top: 3px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 1px 1px 4px var(--azul-claro);
+    background-color: transparent;
+    color: var(--azul-claro);
+    font-weight: 400;
+    font-style: var(--azul-claro);
+}
+
+
+
+.termos {
+    display: flex;
+}
+
+
+
+.aceito {
+    white-space: nowrap;
+    font-size: var(--fonte-p);
+    display: flex;
+    align-items: center;
+}
+
+
+/* imput de checkbox pra aceitar os termos de compromisso */
+.compromisso {
+    width: 20px; 
+    height: 20px; 
+    margin: 10px; 
+    border-radius: 50%; /* Faz com que os cantos sejam arredondados */
+    border: 1px solid var(--azul-claro); /* Adiciona uma borda */
+    appearance: none; /* Remove o estilo padrão do checkbox */
+    -webkit-appearance: none; /*Remove o estilo padrão no Safari */
+    background-color: var(--azul-claro);
+    outline: none; /* Remove a borda de foco */
+    cursor: pointer; /* Adiciona um ponteiro ao passar o mouse */
+}
+
+
+
+/* div que contem o imput da senha e o botao */
+/* ela esta com possitio relative por imput ficar dentro dele e o botao dentro do input e nao ao lado  */
+.dsenha {
+    position: relative;
+    flex-direction: row;
+    box-shadow: 1px 1px 4px var(--azul-claro);
+    border-radius: 30px;
+}
+
+
+/* input da senha */
+#c-senha {
+    width: 100%;
+    padding-right: 40px;
+    box-shadow: none;
+}
+
+
+/* botao que tema a img do olho pra exibir senha */
+.bSenha {
+    position: absolute;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+}
+
+
+/* img do olho que fica dentro do botao exibir */
+.exibe {
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+/* div do botao enviar que fica no final do formulario */
+.Denviar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* botao de enviar que fica no final do formulario */
+.enviar {
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 2.5rem;
+    width: 150px;
+    background-color: #384a59dc;
+    color: var(--azul-claro);
+    font-weight: 700;
+    border: solid 1px var(--azul-claro);
+    border-radius: 30px;
+    font-size: var(--fonte-g);
+    text-align: center;
+    box-shadow: 2px 2px 5px var(--azul-medio-claro);
+}
+
+
+
+
+
+
+/* div de overlay reponsavel pelo efeito de desfoque que ta no fundo */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    z-index: 9227;
+}
+
+
+
+.spanvalidar {
+    padding-left: 10px;
+    font-size: var(--fonte-p);
+    font-weight: 500;
+    color: var(--vermelha);
+}
+
+
+
+/* fildeset pra confirmar a senha */
+/* seu display sera alterado pra block no js caso o primeiro bloco de senha seja preenchido corretamente */
+#confime-senha {
+    display: none;
+}
+
+
+
+
+
+
+/* responsavidade do projeto  */
+@media (max-width: 700px) {
+
+    #formulario {
+        width: 75%;
+        min-width: 350px;
+        padding: 1.5rem 0.5rem;
+        border-radius: 30px;
+        z-index: 9999;
+    }
+
+    .titulo {
+       
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    input {
+        height: 35px;
+    }
+
+    
+}

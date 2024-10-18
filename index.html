@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>formulario de login</title>
+</head>
+
+<body>
+    <div class="principal">
+
+        <form action="receber/" method="post" id="formulario">
+
+            <h1 class="titulo">FORMULARIO</h1>
+            <!-- dados pessoais  -->
+
+            <fieldset class="nome">
+                <label for="nome">Nome Completo</label><br>
+                <input  type="text" id="c-nome" size="20" maxlength="25" placeholder="digite seu nome completo" class="validar" oninput="validarName()">
+               <span style="display: none;" class="spanvalidar"> nome deve ter no minimo 3 caracter</span> 
+            </fieldset>
+
+            <fieldset class="email">
+                <label for="email">Email</label> <br>
+                <input  type="email" id="c-email" size="40" maxlength="40" placeholder="digite seu email" class="validar" oninput="validarEmail()">
+                <span style="display: none;" class="spanvalidar">Email invalido</span>
+            </fieldset>
+
+            <fieldset class="senha">
+                <label for="senha">Senha</label>
+                <div class="dsenha">
+                    <input  type="password" id="c-senha" size="10" maxlength="10" placeholder="digite sua senha" class="validar" oninput="validarSenha()"> 
+                    <button type="button" class="bSenha" ><img src="img/exibe.png" alt="exibe senha" class="exibe" onclick="exibeSenha(2)"></button>
+                </div>
+                <span style="display: none;" class="spanvalidar">senha deve conter 8 caratere</span>
+            </fieldset>
+            
+            <!-- fieldset pra confirmar senha (so aparece apos colocar a primeira senha) -->
+            <fieldset class="senha" id="confime-senha">
+                <label for="senha">Confirme a senha Senha</label>
+                <div class="dsenha">
+                    <input  type="password" id="c-senha" size="20" maxlength="20" placeholder="digite sua senha" class="validar" oninput="confirmarSenha()"> 
+                    <button type="button" class="bSenha" ><img src="img/exibe.png" alt="exibe senha" class="exibe" onclick="exibeSenha(3)"></button>
+                </div>
+                <span style="display: none;" class="spanvalidar">senhas devem ser compativel</span>
+            </fieldset>
+
+            <fieldset class="termos">
+                <label for="temros de compromisso" class="aceito">aceito os termos de compromisso</label>
+                <input id="termos-compromisso" type="checkbox" class="compromisso">
+            </fieldset>
+
+            <div class="Denviar"><button type="submit" class="enviar">enviar</button></div>
+        </form>
+
+        <div class="overlay"></div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>
