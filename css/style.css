@@ -45,6 +45,28 @@
     background-position: center;
 }
 
+
+/* div que exibe a mensagem de bem vindo */
+#bemVindo {
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
+    width: 40%;
+    height: 150px;
+    min-width: 600px;
+    padding: 1rem;
+    border-radius: 30px;
+    z-index: 9999;
+    background-image: url('../img/fundom.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--azul-claro);
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
 /* titulo */
 .titulo {
     text-align: center;
@@ -86,6 +108,10 @@ input {
     color: var(--azul-claro);
     font-weight: 400;
     font-style: var(--azul-claro);
+}
+
+input:focus-visible {
+    outline: none;
 }
 
 

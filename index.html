@@ -56,12 +56,18 @@
                 <input id="termos-compromisso" type="checkbox" class="compromisso">
             </fieldset>
 
-            <div class="Denviar"><button type="submit" class="enviar">enviar</button></div>
+            <div class="Denviar"><button type="submit" class="enviar" onclick="armazena()">enviar</button></div>
         </form>
+
+        <div id="bemVindo">
+            <p>ola! <Span id="spanName"></Span></p>
+            <button id="voltar" class="enviar" onclick="voltar()">voltar</button>
+        </div>
 
         <div class="overlay"></div>
     </div>
 </body>
 <script src="js/script.js"></script>
+<script src="js/localStorage.js"></script>
 
 </html>
